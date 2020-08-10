@@ -1,0 +1,21 @@
+.label {
+  max-width: 300px;
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 5px;
+}
+
+.span {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.span::first-letter {
+  text-transform: uppercase;
+}
+
+.input {
+  outline: none;
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
+}

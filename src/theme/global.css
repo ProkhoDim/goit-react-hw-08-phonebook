@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  padding-left: 30px;
+  font-family: Tahoma, sans-serif;
+}
+
+.Container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+.ContactSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  padding: 60px 0;
+}
