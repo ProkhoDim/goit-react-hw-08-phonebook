@@ -1,0 +1,29 @@
+.userName {
+  margin-right: 25px;
+  font-size: 20px;
+  line-height: 37px;
+  text-transform: capitalize;
+}
+
+.logoutBtn {
+  display: block;
+  padding: 0 10px;
+  text-align: center;
+  text-transform: uppercase;
+  background: #d7d5d1;
+  letter-spacing: 3px;
+  line-height: 37px;
+  color: #ffffff;
+  font-weight: 700;
+  outline: none;
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+.logoutBtn:hover {
+  cursor: pointer;
+  color: #000000;
+  text-shadow: 2px 3px 3px rgb(163, 19, 19);
+  background-color: #fff;
+  border-color: rgb(163, 19, 19);
+}

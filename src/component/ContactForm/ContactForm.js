@@ -66,22 +66,18 @@ class ContactForm extends Component {
   };
 
   render() {
-    const { name, number } = this.state;
-
     return (
       <form onSubmit={this.addContactClick} className={styles.contactForm}>
-        <Input
-          name="name"
-          value={name}
-          text="name"
-          onChange={this.handleChange}
-        />
-        <Input
-          name="number"
-          value={number}
-          text="number"
-          onChange={this.handleChange}
-        />
+        {Object.keys(this.state).map(item => (
+          <div key={item}>
+            <Input
+              name={item}
+              value={this.state[item]}
+              text={item}
+              onChange={this.handleChange}
+            />
+          </div>
+        ))}
         <button type="submit" className={styles.formBtn}>
           Add contact
         </button>

@@ -1,0 +1,31 @@
+.formContainer {
+  padding-top: 60px;
+}
+
+.form {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 300px;
+  padding: 10px;
+}
+
+.form__btn {
+  background-color: #fff;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 600;
+  outline: none;
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.75);
+}
+
+.form__btn:hover {
+  outline: none;
+  cursor: pointer;
+  background-color: green;
+  color: white;
+}

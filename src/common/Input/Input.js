@@ -2,13 +2,17 @@ import React from 'react';
 import styles from './Input.module.css';
 import PropTypes from 'prop-types';
 
-const Input = ({ name, value, text, onChange }) => {
+const Input = ({ name, value, text, onChange, type }) => {
   return (
     <>
       <label className={styles.label}>
         <span className={styles.span}>{text}</span>
         <input
-          type="input"
+          type={
+            type === 'email' || type === 'password' || type === 'number'
+              ? type
+              : 'input'
+          }
           name={name}
           onChange={onChange}
           value={value}
