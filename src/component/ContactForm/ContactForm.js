@@ -78,9 +78,22 @@ class ContactForm extends Component {
             />
           </div>
         ))}
-        <button type="submit" className={styles.formBtn}>
-          Add contact
-        </button>
+        <div>
+          <button
+            type="submit"
+            className={[styles.formBtn, styles.formBtnAdd].join(' ')}
+          >
+            Add
+          </button>
+          <button
+            type="button"
+            onClick={this.formReset}
+            className={[styles.formBtn, styles.formBtnClear].join(' ')}
+          >
+            Clear
+          </button>
+        </div>
+
         <ToastContainer />
       </form>
     );

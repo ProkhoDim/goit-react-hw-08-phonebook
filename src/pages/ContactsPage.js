@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import { ContactForm, ContactList, Filter } from '../component';
 import { contactsSelectors, contactsOperations } from '../redux/contacts';
+import Loader from 'react-loader-spinner';
 
 class ContactsPage extends Component {
   componentDidMount() {
@@ -18,9 +19,18 @@ class ContactsPage extends Component {
         </section>
         <section className="ContactSection">
           {contactList.length > 0 && (
-            <h2>
+            <h2 style={{ position: 'relative' }}>
               Contacts
-              {isLoading && <span> Loading...</span>}
+              {isLoading && (
+                <span style={{ position: 'absolute' }}>
+                  <Loader
+                    type="ThreeDots"
+                    color="#6d6d6d"
+                    height={'1rem'}
+                    width={60}
+                  />
+                </span>
+              )}
             </h2>
           )}
           {(contactList.length > 3 || filter) && <Filter />}

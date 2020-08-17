@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 import { authSelectors, authOperations } from '../../redux/authorization';
 import styles from './UserNavigation.module.css';
 
-const UserNavigation = ({ username, onLogout }) => {
+const UserNavigation = ({ user, onLogout }) => {
   return (
     <div className="navLink__container">
-      <p className={styles.userName}>{username}</p>
+      <p className={styles.userName}>{user}</p>
       <div>
         <button onClick={onLogout} className={styles.logoutBtn}>
           Logout
@@ -17,7 +17,7 @@ const UserNavigation = ({ username, onLogout }) => {
 };
 
 const mapStateToProps = state => ({
-  username: authSelectors.currentUserName(state),
+  user: authSelectors.currentUserEmail(state),
 });
 
 const mapDispatchToProps = {

@@ -5,5 +5,5 @@ export { default as ContactList } from './ContactList';
 export { default as LoginMenu } from './LoginMenu';
 export { default as UserNavigation } from './UserNavigation';
 export { default as PageNavigation } from './PageNavigation';
-export { default as PublicRoute } from './PublicRoute';
-export { default as PrivateRoute } from './PrivateRoute';
+export { default as PublicRoute } from '../common/PublicRoute';
+export { default as PrivateRoute } from '../common/PrivateRoute';

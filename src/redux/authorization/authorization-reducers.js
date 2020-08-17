@@ -34,4 +34,9 @@ const isAuthenticated = createReducer(false, {
   [authAction.getCurrentUserError]: () => false,
 });
 
-export default combineReducers({ user, token, error, isAuthenticated });
+export default combineReducers({
+  user,
+  token,
+  error,
+  isAuthenticated,
+});

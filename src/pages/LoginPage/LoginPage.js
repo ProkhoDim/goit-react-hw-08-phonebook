@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 const LoginPage = ({ handleSubmit }) => {
   return (
-    <div>
+    <div className="container__background">
       <Form
         initialState={{ email: '', password: '' }}
         onSubmit={handleSubmit}

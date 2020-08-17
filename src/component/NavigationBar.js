@@ -1,6 +1,6 @@
 import React from 'react';
-import { LoginMenu, UserNavigation, PageNavigation } from '../index';
-import { authSelectors } from '../../redux/authorization';
+import { LoginMenu, UserNavigation, PageNavigation } from './index';
+import { authSelectors } from '../redux/authorization';
 import { connect } from 'react-redux';
 
 const NavigationBar = ({ isAuthenticated }) => {

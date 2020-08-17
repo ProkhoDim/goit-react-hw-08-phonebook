@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import Input from '../../common/Input';
+import Input from '../common/Input';
 
-import * as actions from '../../redux/contacts/contacts-actions';
-import { contactsSelectors } from '../../redux/contacts';
+import * as actions from '../redux/contacts/contacts-actions';
+import { contactsSelectors } from '../redux/contacts';
 
 const Filter = ({ filter, onChange }) => {
   return (

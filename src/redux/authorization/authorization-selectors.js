@@ -1,5 +1,5 @@
 const getIsAuth = state => state.auth.isAuthenticated;
 
-const currentUserName = state => state.auth.user.name;
+const currentUserEmail = state => state.auth.user.email;
 
-export default { getIsAuth, currentUserName };
+export default { getIsAuth, currentUserEmail };

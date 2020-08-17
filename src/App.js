@@ -1,11 +1,18 @@
 import React, { Component, lazy, Suspense } from 'react';
 import { Switch } from 'react-router-dom';
-import { connect } from 'react-redux';
-import './theme/global.css';
 
-import { NavigationBar, PublicRoute, PrivateRoute } from './component';
+import Loader from 'react-loader-spinner';
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
+
+import { connect } from 'react-redux';
+
+import routes from './routes';
+import { NavigationBar } from './component';
+import { PublicRoute, PrivateRoute } from './common';
 
 import { authOperations } from './redux/authorization';
+
+import './theme/global.css';
 
 const HomePage = lazy(() =>
   import('./pages/HomePage' /* webpackChunkName: 'home-page' */),
@@ -29,24 +36,28 @@ class App extends Component {
       <>
         <NavigationBar />
         <div className="Container">
-          <Suspense fallback={<h2>Loading...</h2>}>
+          <Suspense
+            fallback={
+              <Loader type="ThreeDots" color="#6d6d6d" height={80} width={80} />
+            }
+          >
             <Switch>
-              <PublicRoute exact path="/" component={HomePage} />
+              <PublicRoute exact path={routes.HOME} component={HomePage} />
               <PublicRoute
-                path="/login"
+                path={routes.LOGIN}
                 restricted
-                redirectTo="/contacts"
+                redirectTo={routes.CONTACTS}
                 component={LoginPage}
               />
               <PublicRoute
-                path="/register"
+                path={routes.REGISTER}
                 restricted
-                redirectTo="/contacts"
+                redirectTo={routes.CONTACTS}
                 component={RegPage}
               />
               <PrivateRoute
-                path="/contacts"
-                redirectTo="/login"
+                path={routes.CONTACTS}
+                redirectTo={routes.LOGIN}
                 component={ContactsPage}
               />
             </Switch>
